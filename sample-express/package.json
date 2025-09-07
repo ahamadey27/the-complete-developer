@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "description": "first project ",
   "license": "ISC",
-  "author": "alex hamadey",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
+  "type": "module",
   "dependencies": {
-    "express": "^4.21.2"
-  }
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.6"
+  },
+  "devDependencies": {}
 }
