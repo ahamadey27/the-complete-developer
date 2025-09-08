@@ -7,7 +7,6 @@ const port = 3000; //constant for the port to use
 
 server.get('/hello', function (req, res){
     const response = routeHello(req, res);
-    res.send(response);
 });
 
 server.get("/api/names", async function (req, res) {
