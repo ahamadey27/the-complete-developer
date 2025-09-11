@@ -1,0 +1,1 @@
+let validTuple: [string, number] = ["words", 10];
