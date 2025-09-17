@@ -20,7 +20,7 @@ export const routeAPINames = async () => {
         .join("<br>"); // join all items with a break tag
     return names;
 };
-const routeWeather = (query) => queryWeatherData(query);
+export const routeWeather = (query) => queryWeatherData(query);
 const queryWeatherData = (query) => {
     return {
         zipcode: query.zipcode,

@@ -1,13 +1,11 @@
 import { routeHello, routeAPINames, routeWeather } from "./routes.js";
 import express, { Request, Response } from "express";
 
-const server = express(); // instantiate application
-// const express = require('express'); //load express package into file (JS note)
+const server = express(); // instantiate application.. const express = require('express'); //load express package into file (JS note)
 const port = 3000; // constant for the port to use
 
 server.get('/hello', (req: Request, res: Response) => {
-    // call route handler for /hello endpoint
-    const response = routeHello();
+    const response = routeHello(); // call route handler for /hello endpoint
     res.send(response);
 });
 
