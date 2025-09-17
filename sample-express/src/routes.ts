@@ -7,15 +7,13 @@ export const routeHello = (): string => "Hello World"; //create first for existi
 
 // This route will create an API endpoint page that will list usernames and IDs
 export const routeAPINames = async (): Promise<string> => {
-    // define async so we can use await syntax for fetch call
-    const url = "https://www.usemodernfullstack.dev/api/v1/users";
+    const url = "https://www.usemodernfullstack.dev/api/v1/users"; // define async so we can use await syntax for fetch call
     let data: responseItemType[];
     try {
         const response = await fetch(url);
         data = (await response.json()) as responseItemType[];
     } catch (err) {
-        // return the error (caller can decide how to represent it)
-        return (err as Error).toString();
+        return (err as Error).toString(); // return the error (caller can decide how to represent it)
     }
     // define API endpoint in constant and another variable to store async data (data is scoped within try catch block)
     const names = data
