@@ -1,11 +1,9 @@
 import { routeHello, routeAPINames, routeWeather } from "./routes.js";
 import express from "express";
-const server = express(); // instantiate application
-// const express = require('express'); //load express package into file (JS note)
+const server = express(); // instantiate application.. const express = require('express'); //load express package into file (JS note)
 const port = 3000; // constant for the port to use
 server.get('/hello', (req, res) => {
-    // call route handler for /hello endpoint
-    const response = routeHello();
+    const response = routeHello(); // call route handler for /hello endpoint
     res.send(response);
 });
 server.get("/api/names", async function (_req, res) {
@@ -23,7 +21,7 @@ server.get("/api/names", async function (_req, res) {
     // send back the fetched response (or an error message)
     res.send(response);
 });
-server.get("api/weather/:zipcode", function (req, res) {
+server.get("/api/weather/:zipcode", function (req, res) {
     const response = routeWeather({ zipcode: req.params.zipcode });
     res.send(response);
 });

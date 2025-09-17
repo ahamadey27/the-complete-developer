@@ -1,4 +1,5 @@
-import { query } from "express";
+import { query } from "express"; //This statement pulls in Express’s built-in query middleware factory. When you call query(), it returns a middleware function that parses the URL’s query string and populates req.query with its key–value pairs
+
 import fetch from "node-fetch"; // import fetch module for async requests
 
 // simple hello route for existing /hello endpoint

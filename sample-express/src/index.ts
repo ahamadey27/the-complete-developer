@@ -9,6 +9,7 @@ server.get('/hello', (req: Request, res: Response) => {
     res.send(response);
 });
 
+//these need to return a value wrapped in a promise, a Promise is a special JavaScript object that represents the eventual result of an asynchronous operation that is currently in progress
 server.get("/api/names",
     async function (_req: Request, res: Response): Promise<void> {
         // This route will create an API endpoint page that will list usernames and IDs
