@@ -1,19 +1,25 @@
 import fetch from "node-fetch";
-export const routeHello = () => {
-    return "Hello Fetch";
-};
+export const routeHello = () => "Hello World";
 export const routeAPINames = async () => {
     const url = "https://www.usemodernfullstack.dev/api/v1/users";
+    let data;
     try {
         const response = await fetch(url);
-        const data = (await response.json());
-        const names = data
-            .map((item) => `id: ${item.id}, name: ${item.name}`)
-            .join("<br>");
-        return names;
+        data = (await response.json());
     }
     catch (err) {
-        console.error("fetch error", err);
-        throw err;
+        return "Error";
     }
+    const names = data
+        .map((item) => `id: ${item.id}, ${item.name}`)
+        .join("<br>");
+    return names;
+};
+const routeWeather = (query) => queryWeatherData(query);
+const queryWeatherData = (query) => {
+    return {
+        zipcode: query.zipcode,
+        weather: "sunny",
+        temp: 35
+    };
 };

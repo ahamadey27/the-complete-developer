@@ -1,21 +1,24 @@
+import { routeHello, routeAPINames, routeWeather } from "../routes.js";
 import express from "express";
-import { routeHello, routeAPINames } from "./routes.js";
 const server = express();
 const port = 3000;
 server.get('/hello', (req, res) => {
     const response = routeHello();
     res.send(response);
 });
-server.get('/api/names', async (req, res) => {
+server.get("/api/names", async function (_req, res) {
+    let response;
     try {
-        const response = await routeAPINames();
-        res.send(response);
+        response = await routeAPINames();
     }
     catch (err) {
-        console.error(err);
-        res.status(500).send('Internal Server Error');
+        console.log("Error");
     }
 });
-server.listen(port, () => {
-    console.log('listening on ' + port);
+server.get("api/weather/:zipcode", function (req, res) {
+    const response = routeWeather({ zipcode: req.params.zipcode });
+    res.send(response);
+});
+server.listen(port, function () {
+    console.log("Listening on " + port);
 });
