@@ -27,13 +27,10 @@ server.get("/api/names",
     }
 );
 
-server.get(
-    "api/weather/:zipcode",
-    function (req: Request, res: Response): void {
-        const response = routeWeather ({zipcode: req.params.zipcode});
-        res.send(response);
-    }
-);
+server.get("/api/weather/:zipcode", function (req: Request, res: Response): void {
+    const response = routeWeather({ zipcode: req.params.zipcode });
+    res.send(response);
+});
 
 server.listen(port, function (): void {
     console.log('listening on ' + port);
