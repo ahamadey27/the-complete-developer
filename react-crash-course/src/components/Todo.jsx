@@ -1,6 +1,9 @@
  function Todo() {
     return (
-        <div>Todo item</div>
+        <div>
+            <h2>Finish React Course</h2>
+            <button>Delete</button>
+        </div>
     )
  }
 
