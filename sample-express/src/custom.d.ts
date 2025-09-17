@@ -7,7 +7,7 @@ type responseItemType = {
 type WeatherDetailType = {
     zipcode: string;
     weather: string;
-    temp?: string;
+    temp?: number;
 }
 
 interface WeatherQueryInterface {

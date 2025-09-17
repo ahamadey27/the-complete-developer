@@ -1,5 +1,5 @@
-import express, { Request, Response } from "express";
-import { routeHello, routeAPINames } from "./routes.js";
+import { routeHello, routeAPINames, routeWeather } from "../routes.js";
+import express, { Request, response, Response } from "express";
 
 const server = express();
 const port = 3000;
@@ -9,16 +9,26 @@ server.get('/hello', (req: Request, res: Response) => {
     res.send(response);
 });
 
-server.get('/api/names', async (req: Request, res: Response) => {
-    try {
-        const response = await routeAPINames();
-        res.send(response);
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Internal Server Error');
+server.get("/api/names",
+    async function (_req: Request, res: Response): Promise<void> {
+        let response: string;
+        try {
+            response = await routeAPINames();
+        }
+        catch(err) {
+            console.log("Error");
+        }
     }
-});
+);
 
-server.listen(port, () => {
-    console.log('listening on ' + port);
-});
+server.get(
+    "api/weather/:zipcode",
+    function (req: Request, res: Response): void {
+        const response = routeWeather ({zipcode: req.params.zipcode});
+        res.send(response);
+    }
+);
+
+server.listen(port, function (): void {
+    console.log("Listening on " + port);
+})
