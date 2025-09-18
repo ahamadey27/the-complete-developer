@@ -1,6 +1,7 @@
 import './App.css'
 import TodoTitle from "./components/TodoTitle.jsx"
 import Todo from "./components/Todo.jsx";
+import Popup from './components/popup.jsx';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Todo />
       <Todo />
       <Todo />
+      <Popup />
     </>
   );
 }
