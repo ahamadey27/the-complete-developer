@@ -1,11 +1,11 @@
-import Todo from "./components/Todo.jsx"
 import './App.css'
-import MyTodo from "./components/MyTodo.jsx";
+import TodoTitle from "./components/TodoTitle.jsx"
+import Todo from "./components/Todo.jsx";
 
 function App() {
   return (
     <>
-      <MyTodo />
+      <TodoTitle />
       <Todo />
       <Todo />
       <Todo />
