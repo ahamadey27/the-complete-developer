@@ -1,10 +1,11 @@
-function Todo(props) {
+function Todo({task, description}) {
     return (
         <div className="todo-item">
-            <h2>{props.task}</h2>
+            <h2>{task}</h2>
+            <p>{description}</p>
             <button>Delete</button>
         </div>
     )
 };
 
-export default Todo;
+export default Todo; 

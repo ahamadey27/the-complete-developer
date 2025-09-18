@@ -7,11 +7,15 @@ function App() {
   return (
     <>
       <TodoTitle />
-      <Todo task="Learn React" />
-      <Todo task="Finish ASAP Frontend"/>
-      <Todo task="Land a job"/>
-      <Todo task="Make money"/>
-      {/* <Popup /> */}
+      <Todo task="Learn React" 
+      description="Code along and take notes" />
+      <Todo task="Finish ASAP Frontend"
+      description="Work the front end"/>
+      <Todo task="Land a job"
+      description="Build portfolio"/>
+      <Todo task="Make money"
+      description="Save your money"/>
+      {/* <Popup /> */} 
     </>
   );
 }
