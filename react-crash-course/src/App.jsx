@@ -4,7 +4,7 @@ import './App.css'
 function App() {
   return (
     <>
-      <h1>My ToDo List</h1>
+      <h1>My ToDos</h1>
       <Todo />
       <Todo />
       <Todo />
