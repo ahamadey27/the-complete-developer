@@ -11,7 +11,7 @@ function App() {
       <Todo />
       <Todo />
       <Todo />
-      <Popup />
+      {/* <Popup /> */}
     </>
   );
 }
