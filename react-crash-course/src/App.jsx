@@ -1,10 +1,11 @@
 import Todo from "./components/Todo.jsx"
 import './App.css'
+import MyTodo from "./components/MyTodo.jsx";
 
 function App() {
   return (
     <>
-      <h1>My ToDos</h1>
+      <MyTodo />
       <Todo />
       <Todo />
       <Todo />
