@@ -1,6 +1,6 @@
- function TodoTitle() {
+ function TodoTitle({todoTitle}) {
     return (
-        <h1>My Todos</h1>
+        <h1>{todoTitle}</h1>
     )
  }
 

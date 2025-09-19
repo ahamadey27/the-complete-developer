@@ -6,7 +6,7 @@ import Popup from './components/popup.jsx';
 function App() {
   return (
     <>
-      <TodoTitle />
+      <TodoTitle todoTitle="My Todo's" />
       <Todo task="Learn React" 
       description="Code along and take notes" />
       <Todo task="Finish ASAP Frontend"
