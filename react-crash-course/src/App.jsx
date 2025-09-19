@@ -7,14 +7,20 @@ function App() {
   return (
     <>
       <TodoTitle todoTitle="My Todo's" />
+      <div>
+        <input type="text" onChange={(event) => {
+          console.log(event.target.value)
+        }}/> 
+        <button>Add To</button> 
+      </div>
       <Todo task="Learn React" 
-      description="Code along and take notes" />
+      />
       <Todo task="Finish ASAP Frontend"
-      description="Work the front end"/>
+      />
       <Todo task="Land a job"
-      description="Build portfolio"/>
+      />
       <Todo task="Make money"
-      description="Save your money"/>
+      />
       {/* <Popup buttonTitle="Are You Sure?"/>  */}
     </>
   );
