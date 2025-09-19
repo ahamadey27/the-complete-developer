@@ -21,7 +21,7 @@ function App() {
       />
       <Todo task="Make money"
       />
-      {/* <Popup buttonTitle="Are You Sure?"/>  */}
+      <Popup buttonTitle="Are You Sure?"/> 
     </>
   );
 }
