@@ -4,6 +4,13 @@ import Todo from "./components/Todo.jsx";
 import Popup from './components/popup.jsx';
 
 function App() {
+  let popupOpen = false;
+
+  function togglePopup() {
+    popupOpen = !popupOpen;
+    console.log(popupOpen);
+  }
+   
   return (
     <>
       <TodoTitle todoTitle="My Todo's" />
@@ -11,7 +18,7 @@ function App() {
         <input type="text" onChange={(event) => {
           console.log(event.target.value)
         }}/> 
-        <button>Add To</button> 
+        <button onClick={() => togglePopup()}>Add To</button> 
       </div>
       <Todo task="Learn React" 
       />
@@ -21,7 +28,7 @@ function App() {
       />
       <Todo task="Make money"
       />
-      <Popup buttonTitle="Are You Sure?"/> 
+      {popupOpen ? <Popup buttonTitle="Are You Sure?"/> : null }
     </>
   );
 }
