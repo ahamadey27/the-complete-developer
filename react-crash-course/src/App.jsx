@@ -2,9 +2,13 @@ import './App.css'
 import TodoTitle from "./components/TodoTitle.jsx"
 import Todo from "./components/Todo.jsx";
 import Popup from './components/popup.jsx';
+import Counter from './components/Counter.jsx'
 import {useState} from "react";
 
 function App() {
+
+  return <Counter />
+  
   const [popupOpen, setPopupOpen] = useState(false);
   
    
