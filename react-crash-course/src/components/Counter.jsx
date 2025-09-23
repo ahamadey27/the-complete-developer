@@ -5,9 +5,9 @@ function Counter() {
     return(
         <div>
             <h1>Counter: {count}</h1>
-            <button onClick={() => console.log('increment')} >Increment</button>
-            <button onClick={() => console.log('decrement')}>Decrement</button>
-            <button onClick={() => console.log('reset')}>Reset</button>
+            <button onClick={() => setCount(count + 1)} >Increment</button>
+            <button onClick={() => setCount(count -1 )}>Decrement</button>
+            <button onClick={() => setCount(0)}>Reset</button>
         </div>
     )
 }
