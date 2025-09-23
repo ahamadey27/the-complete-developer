@@ -3,9 +3,10 @@ import TodoTitle from "./components/TodoTitle.jsx"
 import Todo from "./components/Todo.jsx";
 import Popup from './components/Popup.jsx';
 import Counter from "./components/Counter.jsx"
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 function App() { 
+  //Best practice is to use useState hook on top, followed by functions then useEffect hook on the bottom
     const [popupOpen, setPopupOpen] = useState(false);
 
     //First step to Emitting Events 
@@ -17,6 +18,8 @@ function App() {
     function closePopup() {
       setPopupOpen(false);
     }
+
+    useEffect(() => {console.log('Component Mounted')}, [])
    
   return (
     <>

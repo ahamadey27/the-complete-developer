@@ -1,8 +1,8 @@
 function Todo({task, togglePopup}) {
 
-    function deleteHandler() {
-        console.log("Delete", task)
-    }
+    // function deleteHandler() {
+    //     console.log("Delete", task)
+    // }
     return (
         <div className="todo-item">
             <h2>{task}</h2>
