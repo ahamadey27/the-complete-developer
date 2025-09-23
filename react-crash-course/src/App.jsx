@@ -6,10 +6,12 @@ import Counter from "./components/Counter.jsx"
 import {useState} from "react";
 
 function App() {
+    const [popupOpen, setPopupOpen] = useState(false);
 
-  return <Counter />
-
-  const [popupOpen, setPopupOpen] = useState(false);
+    //First step to Emitting Events 
+    function togglePopup() {
+      console.log('parent notified')
+    }
   
    
   return (
@@ -21,14 +23,10 @@ function App() {
         }}/> 
         <button onClick={() => setPopupOpen(true)}>Add To</button> 
       </div>
-      <Todo task="Learn React" 
-      />
-      <Todo task="Finish ASAP Frontend"
-      />
-      <Todo task="Land a job"
-      /> 
-      <Todo task="Make money"
-      />
+      <Todo togglePopup ={togglePopup} task="Learn React"/>
+      <Todo togglePopup ={togglePopup} task="Finish ASAP Frontend"/>
+      <Todo togglePopup ={togglePopup} task="Land a job"/> 
+      <Todo togglePopup ={togglePopup} task="Make money"/>
       {popupOpen && <Popup buttonTitle="Are You Sure?"/>}
     </>
   );

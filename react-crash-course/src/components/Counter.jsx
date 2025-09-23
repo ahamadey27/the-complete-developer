@@ -12,9 +12,7 @@ function Counter() {
             <button onClick={() => {
                 setArray((prevArray) => [...prevArray, '-1'])
             }}>Decrement</button> 
-            <button>Reset</button>
-            
-            <button onClick={() => setCount(0)}>Reset</button>
+            <button>Reset</button> 
         </div>
     ) 
 }
