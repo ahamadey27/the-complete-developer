@@ -19,7 +19,9 @@ function App() {
       setPopupOpen(false);
     }
 
-    useEffect(() => {console.log('Component Mounted')}, [])
+    useEffect(() => {console.log('Only when component mounts')}, [])
+    useEffect(() => {console.log(`When component mounts AND ${popupOpen} changes`)}, [popupOpen])
+    useEffect(() => {console.log("on EVERY render")})
    
   return (
     <>
